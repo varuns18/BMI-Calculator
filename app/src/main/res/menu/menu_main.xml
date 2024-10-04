@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mode_apps"
+        android:icon="@drawable/apps"
+        android:title="More Apps"
+        android:contentDescription="@string/content_description_search"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        android:icon="@drawable/share"
+        android:contentDescription="@string/content_description_search"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        android:contentDescription="@string/content_description_search"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="true"
+        app:liftOnScrollColor="@color/surface"
+        app:liftOnScrollTargetViewId="@+id/scrollView1">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/logo_icon"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/CustomToolbarTitleTextAppearance"
+            app:titleTextColor="@color/onSurface"
+            app:navigationContentDescription="App Logo"
+            app:menu="@menu/menu_main"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/nor_10dp"
+                android:layout_marginEnd="@dimen/nor_10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="13dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_gender"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/ptsans_bold"
+                        android:textSize="@dimen/font_26sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/nor_13dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button1"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/body"
+                            android:layout_height="wrap_content"
+                            android:text="@string/male"
+                            app:icon="@drawable/male" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button2"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/body"
+                            android:text="@string/female"
+                            app:icon="@drawable/female" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button3"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/body"
+                            android:text="@string/transgender"
+                            app:icon="@drawable/transgender" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/nor_10dp"
+                android:layout_marginTop="@dimen/nor_10dp"
+                android:layout_marginEnd="@dimen/nor_10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/materialCardView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/nor_13dp">
+
+                            <TextView
+                                android:id="@+id/height_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/primary"
+                                android:fontFamily="@font/ptsans_bold"
+                                android:text="@string/height"
+                                android:textSize="@dimen/font_26sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/height_data"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/nor_5dp"
+                                android:text="3.33"
+                                android:textColor="@color/onSurface"
+                                android:fontFamily="@font/alfa"
+                                android:textSize="@dimen/font_57sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/height_textView" />
+
+                            <TextView
+                                android:id="@+id/cm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/nor_2dp"
+                                android:layout_marginBottom="@dimen/nor_10dp"
+                                android:text="@string/cm"
+                                android:textColor="@color/onSurfaceVariant"
+                                android:fontFamily="@font/alfa"
+                                android:textSize="@dimen/font_24sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/height_data"
+                                app:layout_constraintStart_toEndOf="@+id/height_data" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/seekHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/nor_600dp"
+                        android:layout_marginTop="@dimen/nor_20dp"
+                        android:layout_marginBottom="@dimen/nor_20dp"
+                        android:contentDescription="@string/height"
+                        android:valueFrom="0"
+                        android:valueTo="10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/materialCardView3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/nor_10dp"
+                android:paddingTop="@dimen/nor_10dp"
+                android:paddingEnd="@dimen/nor_10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView4"
+                    style="@style/Widget.Material3.CardView.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/nor_3dp"
+                    app:layout_constraintEnd_toStartOf="@+id/materialCardView5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/nor_13dp">
+
+                        <TextView
+                            android:id="@+id/weight_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ptsans_bold"
+                            android:textColor="@color/primary"
+                            android:text="@string/weight"
+                            android:textSize="@dimen/font_26sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/weight_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/nor_5dp"
+                            android:layout_marginEnd="@dimen/nor_5dp"
+                            android:textColor="@color/onSurface"
+                            android:fontFamily="@font/alfa"
+                            android:text="50"
+                            android:textSize="@dimen/font_57sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/weight_textView" />
+
+                        <TextView
+                            android:id="@+id/kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/nor_10dp"
+                            android:fontFamily="@font/alfa"
+                            android:textColor="@color/onSurfaceVariant"
+                            android:text="@string/kg"
+                            android:textSize="@dimen/font_24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/weight_data"
+                            app:layout_constraintStart_toEndOf="@+id/weight_data" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/weight_add_button"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/nor_13dp"
+                            android:text="@string/add"
+                            app:icon="@drawable/add"
+                            android:contentDescription="add weight"
+                            app:iconGravity="textStart"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/weight_data" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/weight_remove_button"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/remove"
+                            app:icon="@drawable/remove"
+                            android:contentDescription="remove weight"
+                            app:iconGravity="textStart"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/weight_add_button" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView5"
+                    style="@style/Widget.Material3.CardView.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/nor_3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/materialCardView4"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/nor_13dp">
+
+                        <TextView
+                            android:id="@+id/age_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary"
+                            android:fontFamily="@font/ptsans_bold"
+                            android:text="@string/age"
+                            android:textSize="@dimen/font_26sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/age_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/nor_5dp"
+                            android:fontFamily="@font/alfa"
+                            android:textColor="@color/onSurface"
+                            android:text="25"
+                            android:textSize="@dimen/font_57sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/age_textView" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/age_add_button"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/nor_13dp"
+                            android:text="@string/add"
+                            app:icon="@drawable/add"
+                            android:contentDescription="add age"
+                            app:iconGravity="textStart"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/age_data" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/age_remove_button"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/remove"
+                            android:contentDescription="remove age"
+                            app:icon="@drawable/remove"
+                            app:iconGravity="textStart"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/age_add_button" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nor_60dp"
+                android:layout_marginStart="@dimen/nor_10dp"
+                android:layout_marginTop="@dimen/nor_10dp"
+                android:layout_marginEnd="@dimen/nor_10dp"
+                android:textSize="@dimen/font_16sp"
+                android:text="@string/calculate_BMI"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView4" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
