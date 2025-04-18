@@ -89,6 +89,3 @@ For questions, suggestions, or feedback, reach out to the repository owner:
 
 - **GitHub Profile:** [varuns18](https://github.com/varuns18)
 
----
-
-**Note:** Make sure to replace `assets/home_screen.png`, `assets/input_screen.png`, and `assets/result_screen.png` with the actual paths to your images in the repository. You can also adjust the section titles or descriptions as needed.
